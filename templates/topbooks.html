@@ -67,137 +67,30 @@
             <h2 class = "position-relative d-inline-block">Top 50 books with highest reviews</h2>
         </div>
 
+        
         <div class = "row g-0">
 
             <div class = "collection-list mt-4 row gx-0 gy-3">
+                {% for i in range(book_name|length)%}
                 <div class = "col-md-6 col-lg-4 col-xl-2 p-4 best">
                     <div class = "collection-img position-relative">
-                        <img src = "http://images.amazon.com/images/P/0425176428.01.LZZZZZZZ.jpg"  class = "w-100">        
+                        <img src = "{{image[i]}}"  class = "w-100">        
                     </div>
-                    <div class = "text-center">
+                    <div class = "text-right">
                         <div class = "rating mt-3">
+                            {%for j in range(rating[i]|int)%}
                             <span class = "text-primary"><i class = "fas fa-star"></i></span>
-                            <span class = "text-primary"><i class = "fas fa-star"></i></span>
-                            <span class = "text-primary"><i class = "fas fa-star"></i></span>
-                            <span class = "text-primary"><i class = "fas fa-star"></i></span>
-                            <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                            {% endfor %}
+                            {{rating[i]|round(2)}}
                         </div>
-                        <p class = "text-capitalize my-1">What if</p>
+                        <p class = "text-capitalize my-1"><b>Book Title:</b> {{book_name[i]}}</p>
+                        <p class = "text-capitalize my-1"><b>Author:</b> {{author[i]}}</p>
+                        <p class = "text-capitalize my-1"><b>reviews:</b> {{votes[i]}}</p>
                     </div>
                 </div>
-
-                <div class = "col-md-6 col-lg-4 col-xl-2 p-4 feat">
-                    <div class = "collection-img position-relative">
-                        <img src = "http://images.amazon.com/images/P/0425176428.01.LZZZZZZZ.jpg" class = "w-100">
-
-                    </div>
-                    <div class = "text-center">
-                        <div class = "rating mt-3">
-                            <span class = "text-primary"><i class = "fas fa-star"></i></span>
-                            <span class = "text-primary"><i class = "fas fa-star"></i></span>
-                            <span class = "text-primary"><i class = "fas fa-star"></i></span>
-                            <span class = "text-primary"><i class = "fas fa-star"></i></span>
-                            <span class = "text-primary"><i class = "fas fa-star"></i></span>
-                        </div>
-                        <p class = "text-capitalize my-1">gray shirt</p>
-                    </div>
-                </div>
-
-                <div class = "col-md-6 col-lg-4 col-xl-2 p-4 new">
-                    <div class = "collection-img position-relative">
-                        <img src = "http://images.amazon.com/images/P/0425176428.01.LZZZZZZZ.jpg" class = "w-100">
-                    </div>
-                    <div class = "text-center">
-                        <div class = "rating mt-3">
-                            <span class = "text-primary"><i class = "fas fa-star"></i></span>
-                            <span class = "text-primary"><i class = "fas fa-star"></i></span>
-                            <span class = "text-primary"><i class = "fas fa-star"></i></span>
-                            <span class = "text-primary"><i class = "fas fa-star"></i></span>
-                            <span class = "text-primary"><i class = "fas fa-star"></i></span>
-                        </div>
-                        <p class = "text-capitalize my-1">gray shirt</p>
-                    </div>
-                </div>
-
-                <div class = "col-md-6 col-lg-4 col-xl-2 p-4 best">
-                    <div class = "collection-img position-relative">
-                        <img src = "http://images.amazon.com/images/P/0425176428.01.LZZZZZZZ.jpg" class = "w-100">
-                    </div>
-                    <div class = "text-center">
-                        <div class = "rating mt-3">
-                            <span class = "text-primary"><i class = "fas fa-star"></i></span>
-                            <span class = "text-primary"><i class = "fas fa-star"></i></span>
-                            <span class = "text-primary"><i class = "fas fa-star"></i></span>
-                            <span class = "text-primary"><i class = "fas fa-star"></i></span>
-                            <span class = "text-primary"><i class = "fas fa-star"></i></span>
-                        </div>
-                        <p class = "text-capitalize my-1">gray shirt</p>
-                    </div>
-                </div>
-
-                <div class = "col-md-6 col-lg-4 col-xl-2 p-4 feat">
-                    <div class = "collection-img position-relative">
-                        <img src = "http://images.amazon.com/images/P/0425176428.01.LZZZZZZZ.jpg" class = "w-100">
-                    </div>
-                    <div class = "text-center">
-                        <div class = "rating mt-3">
-                            <span class = "text-primary"><i class = "fas fa-star"></i></span>
-                            <span class = "text-primary"><i class = "fas fa-star"></i></span>
-                            <span class = "text-primary"><i class = "fas fa-star"></i></span>
-                            <span class = "text-primary"><i class = "fas fa-star"></i></span>
-                            <span class = "text-primary"><i class = "fas fa-star"></i></span>
-                        </div>
-                        <p class = "text-capitalize my-1">gray shirt</p>
-                    </div>
-                </div>
-
-                <div class = "col-md-6 col-lg-4 col-xl-2 p-4 new">
-                    <div class = "collection-img position-relative">
-                        <img src = "http://images.amazon.com/images/P/0425176428.01.LZZZZZZZ.jpg" class = "w-100">
-                    </div>
-                    <div class = "text-center">
-                        <div class = "rating mt-3">
-                            <span class = "text-primary"><i class = "fas fa-star"></i></span>
-                            <span class = "text-primary"><i class = "fas fa-star"></i></span>
-                            <span class = "text-primary"><i class = "fas fa-star"></i></span>
-                            <span class = "text-primary"><i class = "fas fa-star"></i></span>
-                            <span class = "text-primary"><i class = "fas fa-star"></i></span>
-                        </div>
-                        <p class = "text-capitalize my-1">gray shirt</p>
-                    </div>
-                </div>
-
-                <div class = "col-md-6 col-lg-4 col-xl-2 p-4 best">
-                    <div class = "collection-img position-relative">
-                        <img src = "http://images.amazon.com/images/P/0425176428.01.LZZZZZZZ.jpg" class = "w-100">
-                    </div>
-                    <div class = "text-center">
-                        <div class = "rating mt-3">
-                            <span class = "text-primary"><i class = "fas fa-star"></i></span>
-                            <span class = "text-primary"><i class = "fas fa-star"></i></span>
-                            <span class = "text-primary"><i class = "fas fa-star"></i></span>
-                            <span class = "text-primary"><i class = "fas fa-star"></i></span>
-                            <span class = "text-primary"><i class = "fas fa-star"></i></span>
-                        </div>
-                        <p class = "text-capitalize my-1">gray shirt</p>
-                    </div>
-                </div>
-
-                <div class = "col-md-6 col-lg-4 col-xl-2 p-4 feat">
-                    <div class = "collection-img position-relative">
-                        <img src = "http://images.amazon.com/images/P/0425176428.01.LZZZZZZZ.jpg" class = "w-100">
-                    </div>
-                    <div class = "text-center">
-                        <div class = "rating mt-3">
-                            <span class = "text-primary"><i class = "fas fa-star"></i></span>
-                            <span class = "text-primary"><i class = "fas fa-star"></i></span>
-                            <span class = "text-primary"><i class = "fas fa-star"></i></span>
-                            <span class = "text-primary"><i class = "fas fa-star"></i></span>
-                            <span class = "text-primary"><i class = "fas fa-star"></i></span>
-                        </div>
-                        <p class = "text-capitalize my-1">gray shirt</p>
-                    </div>
-                </div>
+                {% endfor %}
+                
+            
             </div>
         </div>
 
