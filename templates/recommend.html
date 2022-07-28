@@ -81,7 +81,8 @@
 
         <div class = "row g-0">
             <div class = "collection-list mt-4 row gx-0 gy-3">
-        {% if data %}
+
+        {% if f ==1  %}
         <h3 style="padding-left: 25px;">Here are some recommendations for you...</h3>
         {% for i in data %}
            <div class = "col-md-6 col-lg-4 col-xl-2 p-4 best">
@@ -94,7 +95,10 @@
             </div>
         </div>
         {% endfor %}
+       {% endif %}
 
+       {% if f==0 %}
+       <h3 style="padding-left: 25px;">No results found...</h3>
        {% endif %}
        </div>
        </div>
