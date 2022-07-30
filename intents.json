@@ -1,0 +1,238 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": [
+        "Hi",
+        "Hey",
+        "How are you",
+        "Is anyone there?",
+        "Hello",
+        "Good day"
+      ],
+      "responses": [
+        "Hey :-)",
+        "Hello, thanks for visiting",
+        "Hi there, what can I do for you?",
+        "Hi there, how can I help?"
+      ]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": ["Bye", "See you later", "Goodbye"],
+      "responses": [
+        "See you later, thanks for visiting",
+        "Have a nice day",
+        "Bye! Come back again soon."
+      ]
+    },
+    {
+      "tag": "thanks",
+      "patterns": ["Thanks", "Thank you", "That's helpful", "Thank's a lot!"],
+      "responses": ["Happy to help!", "Any time!", "My pleasure"]
+    },
+    {
+      "tag": "Ratings",
+      "patterns": [
+        "Which is the best book?",
+        "which book is the top rated one?",
+        "The book with highest rating"
+      ],
+      "responses": [
+        "Harry Potter and the Prisoner of Azkaban is the top rated book",
+        "The highest rated book is Harry Potter and the Prisoner of Azkaban",
+        "Harry Potter and the Prisoner of Azkaban"
+      ]
+    },
+    {
+      "tag": "fantasy",
+      "patterns": [
+        "Can you suggest fantasy books?",
+        "I am looking for fantasy books",
+        "suggest some fantasy books"
+        
+      ],
+      "responses": [
+        "The Harry potter series, The Hobbit series, The lord of the rings ",
+        "Few of the fantasy books are The Harry potter series, The Hobbit series, The lord of the rings "
+      ]
+    },
+    {
+      "tag": "fiction",
+      "patterns": [
+        "Can you suggest fiction books?",
+        "I am looking for fiction books",
+        "suggest some fiction books"
+      ],
+      "responses": [
+        "The Da Vinci code, 1984,Antony and Cleopatra, Inferno",
+        "Few of the fiction books are The Da Vinci code, 1984,Angels & Demons, Inferno"
+      ]
+    },
+    {
+      "tag": "Comedy",
+      "patterns": [
+        "Can you suggest comedy books?",
+        "I am looking for comedy books",
+        "suggest some comedy books"
+      ],
+      "responses": [
+        "Skipping christmas, Thats not funny, You need to decide",
+        "Few of the comedy books are Skipping christmas, Thats not funny, You need to decide."
+      ]
+    },
+    {
+      "tag": "Romantic",
+      "patterns": [
+        "Can you suggest romantic books?",
+        "I am looking for romantic books",
+        "suggest some romantic books"
+        
+      ],
+      "responses": [
+        "The notebook, Romeo and Juliet (The New Cambridge Shakespeare), The wish, The pride and prejudice, Love in the time of cholera",
+        "Few of the romatic books are The notebook, A walk to remember, The wish, The pride and prejudice, Love in the time of cholera "
+      ]
+    },
+    {
+      "tag": "Crime",
+      "patterns": [
+        "Can you suggest crime books?",
+        "I am looking for crime books",
+        "suggest some crime books"
+      ],
+      "responses": [
+        "A Caribbean Mystery, Murder on the Orient Express, The Body in the Library (Miss Marple Mysteries (Paperback))",
+        "Few of the crime novels are A Caribbean Mystery, Murder on the Orient Express, The Body in the Library (Miss Marple Mysteries (Paperback))"
+      ]
+    },
+    {
+      "tag": "Mystery",
+      "patterns": [
+        "Can you suggest mystery books?",
+        "I am looking for mystery books",
+        "suggest some mystery books"
+      ],
+      "responses": [
+        "To Kill a Mockingbird, A Caribbean Mystery, Murder on the Orient Express, The Body in the Library (Miss Marple Mysteries (Paperback))",
+        "Few of the mystery novels are To kill a Mockingbird, A Caribbean Mystery, Murder on the Orient Express, The Body in the Library (Miss Marple Mysteries (Paperback)) ."
+      ]
+    }, 
+      {
+      "tag": "Drama",
+      "patterns": [
+        "Can you suggest Drama books?",
+        "I am looking for drama books",
+        "suggest some drama books"
+      ],
+      "responses": [
+        "Macbeth: Shakespeare Made Easy (Shakespeare Made Easy), King Lear",
+        "Few of the drama novels are Shakespeare Made Easy (Shakespeare Made Easy), King Lear."
+      ]
+    }, 
+      {
+      "tag": "Horror",
+      "patterns": [
+        "Can you suggest horror books?",
+        "I am looking for horror books",
+        "suggest some horror books"
+      ],
+      "responses": [
+        "Pet Sematary, Dreamcatcher, Secret Windows: Essays and Fiction on the Craft of Writing, Desperation",
+        "Few of the horror novels are Pet Sematary, Dreamcatcher, Secret Windows: Essays and Fiction on the Craft of Writing, Desperation."
+      ]
+    }, 
+    {
+      "tag": "Author",
+      "patterns": [
+        "who is the author with highest number of publications?",
+        "Author with most published books?",
+        "Author with highest number of books published"
+      ],
+      "responses": [
+        "Agatha christie",
+        "Agatha christie was the author with most published books."
+      ]
+    },    
+    {
+      "tag": "Year_2020",
+      "patterns": [
+        "Can you list books published in 2020?",
+        "can you list most recent published book?",
+        "The latest book available",
+        "What is the latest book available?"
+      ],
+      "responses": [
+        "LOOK HOMEWARD ANGEL",
+        "Book published in 2020 is LOOK HOMEWARD ANGEL.",
+          "The latest book available is LOOK HOMEWARD ANGEL"
+      ]
+    },    
+    {
+      "tag": "2000's",
+      "patterns": [
+        "Can you list the books published in 2000's?",
+        "Can you list some of the books published in 20th century?",
+        "list few books of 2000's"
+      ],
+      "responses": [
+        "Red Dwarf,The Five Love Languages: Five Love Languages,PS, I Love You,The Cornish Trilogy,A Village Dilemma",
+        "few of the books published in 20th century are Red Dwarf,The Five Love Languages: Five Love Languages,PS, I Love You,The Cornish Trilogy,A Village Dilemm",
+        " Red Dwarf,The Five Love Languages: Five Love Languages,PS, I Love You,The Cornish Trilogy,A Village Dilemm are the few books of 2000's"  
+      ]
+    },    
+    {
+      "tag": "1900's",
+      "patterns": [
+        "Can you list the books published in 1900's?",
+        "Can you list some of the books published in 19th century?",
+        "Can you suggest some old books?",
+        "Suggest some old books",
+        "list few books of 1900's"
+      ],
+      "responses": [
+        "The New Baby, The Poetry of Wang Wei: New Translations and Commentary , The Indian in the Cupboard, The GREAT GATSBY",
+        "few of the books published in 19th century are The New Baby, The Poetry of Wang Wei: New Translations and Commentary , The Indian in the Cupboard, The GREAT GATSBY",
+          "The New Baby, The Poetry of Wang Wei: New Translations and Commentary , The Indian in the Cupboard, The GREAT GATSBY are the few books of 1900's."
+      ]
+    },
+    {
+      "tag": "highest_books_published_authors",
+      "patterns": [
+        "Can you list the authors who published highest number of books?",
+        "Top 3 authors who published highest number of books?",
+        "list top 3 authors with highest publications?"
+      ],
+      "responses": [
+        "Agatha Christie, William Shakespeare, Stephen King",
+        "Agatha Christie, William Shakespeare, Stephen King are the top three authors with highest publications",
+          "Three authors with highest publications are Agatha Christie, William Shakespeare, Stephen King."
+      ]
+    },
+      {
+      "tag": "Popular_Author",
+      "patterns": [
+        "Can you tell me who is the most popular Author?",
+        "Tell me one author who is the most popular?",
+        "Tell me an author whose books are most read?"   
+      ],
+      "responses": [
+        "Stephen King",
+        "Stephen King is the Author with most number of ratings"
+      ]
+    },
+      {
+      "tag": "most_rated_books",
+      "patterns": [
+        "Can you list the most rated book?",
+        "which is the most rated book?",
+        "most rated book"
+      ],
+      "responses": [
+        "Wild Animus",
+        "Wild Animus is the book with highest number of ratings",
+          "Book with most number of ratings is Wild Animus."
+      ]
+    }
+  ]
+}

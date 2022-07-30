@@ -1,23 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Book Recommendation System</title>
-    <!-- fontawesome cdn -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- bootstrap css -->
-<!--    <link rel = "stylesheet" href = "{{ url_for('static',filename='bootstrap-5.0.2-dist/css/bootstrap.min.css') }}">-->
-    <!-- custom css -->
-<!--     <link rel = "stylesheet" href = "{{ url_for('static',filename='bootstrap-5.0.2-dist/css/main.css') }}">-->
-<!--     <link rel = "stylesheet" href = "{{ url_for('static',filename='js/script.js') }}">-->
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Book Recommendation System</title>
+<!-- fontawesome cdn -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <!-- bootstrap css -->
-<link rel = "stylesheet" href = "../static/bootstrap-5.0.2-dist/css/bootstrap.min.css">
+
+<link rel = "stylesheet" href = "{{ url_for('static',filename='bootstrap-5.0.2-dist/css/bootstrap.min.css') }}">
 <!-- custom css -->
-<link rel = "stylesheet" href = "../static/css/main.css">
-<link rel = "stylesheet" href = "../static/js/script.js">
+<link rel = "stylesheet" href = "{{ url_for('static',filename='css/main.css') }}">
+<link rel = "stylesheet" href = "{{ url_for('static',filename='js/script.js') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
 </head>
 <body>
     
@@ -37,7 +34,7 @@
             <div class = "collapse navbar-collapse order-lg-1" id = "navMenu">
                 <ul class = "navbar-nav mx-auto text-center">
                     <li class = "nav-item px-2 py-2">
-                        <a class = "nav-link text-uppercase text-dark" href = "#header">home</a>
+                        <a class = "nav-link text-uppercase text-dark" href = "#home">home</a>
                     </li>
                     <li class = "nav-item px-2 py-2">
                         <a class = "nav-link text-uppercase text-dark" href = "#collection">Top books</a>
@@ -111,135 +108,14 @@
                     </div>
     
                     <div class = "collection-list mt-4 row gx-0 gy-3">
+                        {% for i in range(10)%}
                         <div class = "col-md-6 col-lg-4 col-xl-2 p-4 best">
                             <div class = "collection-img position-relative">
-                                <img src = "http://images.amazon.com/images/P/0425176428.01.LZZZZZZZ.jpg"  class = "w-100">        
-                            </div>
-                            <div class = "text-center">
-                                <div class = "rating mt-3">
-                                    <span class = "text-primary"><i class = "fas fa-star"></i></span>
-                                    <span class = "text-primary"><i class = "fas fa-star"></i></span>
-                                    <span class = "text-primary"><i class = "fas fa-star"></i></span>
-                                    <span class = "text-primary"><i class = "fas fa-star"></i></span>
-                                    <span class = "text-primary"><i class = "fas fa-star"></i></span>
-                                </div>
-                                <p class = "text-capitalize my-1">What if</p>
+                                <img src = "{{sp_image[i]}}"  class = "w-100">        
                             </div>
                         </div>
-    
-                        <div class = "col-md-6 col-lg-4 col-xl-2 p-4 feat">
-                            <div class = "collection-img position-relative">
-                                <img src = "http://images.amazon.com/images/P/0425176428.01.LZZZZZZZ.jpg" class = "w-100">
-        
-                            </div>
-                            <div class = "text-center">
-                                <div class = "rating mt-3">
-                                    <span class = "text-primary"><i class = "fas fa-star"></i></span>
-                                    <span class = "text-primary"><i class = "fas fa-star"></i></span>
-                                    <span class = "text-primary"><i class = "fas fa-star"></i></span>
-                                    <span class = "text-primary"><i class = "fas fa-star"></i></span>
-                                    <span class = "text-primary"><i class = "fas fa-star"></i></span>
-                                </div>
-                                <p class = "text-capitalize my-1">What if</p>
-                            </div>
-                        </div>
-    
-                        <div class = "col-md-6 col-lg-4 col-xl-2 p-4 new">
-                            <div class = "collection-img position-relative">
-                                <img src = "http://images.amazon.com/images/P/0425176428.01.LZZZZZZZ.jpg" class = "w-100">
-                            </div>
-                            <div class = "text-center">
-                                <div class = "rating mt-3">
-                                    <span class = "text-primary"><i class = "fas fa-star"></i></span>
-                                    <span class = "text-primary"><i class = "fas fa-star"></i></span>
-                                    <span class = "text-primary"><i class = "fas fa-star"></i></span>
-                                    <span class = "text-primary"><i class = "fas fa-star"></i></span>
-                                    <span class = "text-primary"><i class = "fas fa-star"></i></span>
-                                </div>
-                                <p class = "text-capitalize my-1">What if</p>
-                            </div>
-                        </div>
-    
-                        <div class = "col-md-6 col-lg-4 col-xl-2 p-4 best">
-                            <div class = "collection-img position-relative">
-                                <img src = "http://images.amazon.com/images/P/0425176428.01.LZZZZZZZ.jpg" class = "w-100">
-                            </div>
-                            <div class = "text-center">
-                                <div class = "rating mt-3">
-                                    <span class = "text-primary"><i class = "fas fa-star"></i></span>
-                                    <span class = "text-primary"><i class = "fas fa-star"></i></span>
-                                    <span class = "text-primary"><i class = "fas fa-star"></i></span>
-                                    <span class = "text-primary"><i class = "fas fa-star"></i></span>
-                                    <span class = "text-primary"><i class = "fas fa-star"></i></span>
-                                </div>
-                                <p class = "text-capitalize my-1">What if</p>
-                            </div>
-                        </div>
-    
-                        <div class = "col-md-6 col-lg-4 col-xl-2 p-4 feat">
-                            <div class = "collection-img position-relative">
-                                <img src = "http://images.amazon.com/images/P/0425176428.01.LZZZZZZZ.jpg" class = "w-100">
-                            </div>
-                            <div class = "text-center">
-                                <div class = "rating mt-3">
-                                    <span class = "text-primary"><i class = "fas fa-star"></i></span>
-                                    <span class = "text-primary"><i class = "fas fa-star"></i></span>
-                                    <span class = "text-primary"><i class = "fas fa-star"></i></span>
-                                    <span class = "text-primary"><i class = "fas fa-star"></i></span>
-                                    <span class = "text-primary"><i class = "fas fa-star"></i></span>
-                                </div>
-                                <p class = "text-capitalize my-1">What if</p>
-                            </div>
-                        </div>
-    
-                        <div class = "col-md-6 col-lg-4 col-xl-2 p-4 new">
-                            <div class = "collection-img position-relative">
-                                <img src = "http://images.amazon.com/images/P/0425176428.01.LZZZZZZZ.jpg" class = "w-100">
-                            </div>
-                            <div class = "text-center">
-                                <div class = "rating mt-3">
-                                    <span class = "text-primary"><i class = "fas fa-star"></i></span>
-                                    <span class = "text-primary"><i class = "fas fa-star"></i></span>
-                                    <span class = "text-primary"><i class = "fas fa-star"></i></span>
-                                    <span class = "text-primary"><i class = "fas fa-star"></i></span>
-                                    <span class = "text-primary"><i class = "fas fa-star"></i></span>
-                                </div>
-                                <p class = "text-capitalize my-1">What if</p>
-                            </div>
-                        </div>
-    
-                        <div class = "col-md-6 col-lg-4 col-xl-2 p-4 best">
-                            <div class = "collection-img position-relative">
-                                <img src = "http://images.amazon.com/images/P/0425176428.01.LZZZZZZZ.jpg" class = "w-100">
-                            </div>
-                            <div class = "text-center">
-                                <div class = "rating mt-3">
-                                    <span class = "text-primary"><i class = "fas fa-star"></i></span>
-                                    <span class = "text-primary"><i class = "fas fa-star"></i></span>
-                                    <span class = "text-primary"><i class = "fas fa-star"></i></span>
-                                    <span class = "text-primary"><i class = "fas fa-star"></i></span>
-                                    <span class = "text-primary"><i class = "fas fa-star"></i></span>
-                                </div>
-                                <p class = "text-capitalize my-1">What if</p>
-                            </div>
-                        </div>
-    
-                        <div class = "col-md-6 col-lg-4 col-xl-2 p-4 feat">
-                            <div class = "collection-img position-relative">
-                                <img src = "http://images.amazon.com/images/P/0425176428.01.LZZZZZZZ.jpg" class = "w-100">
-                            </div>
-                            <div class = "text-center">
-                                <div class = "rating mt-3">
-                                    <span class = "text-primary"><i class = "fas fa-star"></i></span>
-                                    <span class = "text-primary"><i class = "fas fa-star"></i></span>
-                                    <span class = "text-primary"><i class = "fas fa-star"></i></span>
-                                    <span class = "text-primary"><i class = "fas fa-star"></i></span>
-                                    <span class = "text-primary"><i class = "fas fa-star"></i></span>
-                                </div>
-                                <p class = "text-capitalize my-1">What if</p>
-                            </div>
-                        </div>
-                    </div>
+                        {% endfor %} 
+                </div>
                 
     
             </div>
@@ -264,6 +140,31 @@
     <!-- end of newsletter -->
 
     <!-- footer -->
+    <div class="container" style="bottom: 21px;float: right;position: sticky;">
+        <div class="chatbox">
+            <div class="chatbox__support">
+                <div class="chatbox__header">
+                    <div class="chatbox__image--header">
+                        <img src="https://img.icons8.com/color/48/000000/circled-user-female-skin-type-5--v1.png" alt="image">
+                    </div>
+                    <div class="chatbox__content--header">
+                        <h4 class="chatbox__heading--header">Chat support</h4>
+                        <p class="chatbox__description--header">Hello. I am Stella. How can I help you?</p>
+                    </div>
+                </div>
+                <div class="chatbox__messages">
+                    <div></div>
+                </div>
+                <div class="chatbox__footer">
+                    <input type="text" placeholder="Write a message...">
+                    <button class="chatbox__send--footer send__button">Send</button>
+                </div>
+            </div>
+            <div class="chatbox__button">
+                <button><img src="{{ url_for('static', filename='images/icons8-topic-100.png') }}" style="size: ;"/></button>
+            </div>
+        </div>
+    </div>
     <footer class = "bg-dark py-5">
         <div class = "container">
             <div class = "row text-white g-4">
@@ -305,7 +206,7 @@
                             <i class = "fas fa-map-marked-alt"></i>
                         </span>
                         <span class = "fw-light">
-                            Albert Street, New York, AS 756, United States of America
+                            
                         </span>
                     </div>
                     <div class = "d-flex justify-content-start align-items-start my-2 text-muted">
@@ -313,7 +214,7 @@
                             <i class = "fas fa-envelope"></i>
                         </span>
                         <span class = "fw-light">
-                            attire.support@gmail.com
+                            
                         </span>
                     </div>
                     <div class = "d-flex justify-content-start align-items-start my-2 text-muted">
@@ -321,7 +222,7 @@
                             <i class = "fas fa-phone-alt"></i>
                         </span>
                         <span class = "fw-light">
-                            +9786 6776 236
+                            
                         </span>
                     </div>
                 </div>
@@ -359,6 +260,10 @@
     <!-- end of footer -->
 
 
+    <script>
+        $SCRIPT_ROOT = {{ request.script_root|tojson }};
+    </script>
+    <script type="text/javascript" src="{{ url_for('static', filename='app.js') }}"></script>
 
 
     <!-- jquery -->
